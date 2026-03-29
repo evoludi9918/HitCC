@@ -160,3 +160,6 @@ Please use this project only for learning, research, teaching, or legitimate eng
 Any use of this project to infringe Anthropic PBC's lawful rights or to bypass product policies is unrelated to this project, and the risk is solely the user's responsibility.
 
 The authors assume no legal responsibility for the accuracy or completeness of the documentation, or for any direct or indirect loss caused by using it, including but not limited to legal risk, technical failure, or data loss.
+
+
+![GitHub stars](https://img.shields.io/github/stars/hitmux/HitCC?style=social)
