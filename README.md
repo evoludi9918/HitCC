@@ -2,7 +2,7 @@
 
 # HitCC
 
-## Reverse-engineered knowledge base for Claude Code CLI Node.js version v2.1.84
+## Complete reverse-engineering documentation of the full logic of Claude Code CLI Node.js version v2.1.84
 
 HitCC is not a source code repository. It is a documentation knowledge base for learning, analysis, and rewrite work.  
 The goal of this project is not to reconstruct the original file tree, but to recover Claude Code CLI's core runtime logic, module boundaries, configuration system, and surrounding ecosystem as faithfully as possible, so it can serve as a stable reference for a runnable alternative or a high-similarity rewrite.
